@@ -1,0 +1,75 @@
+
+
+body {
+    
+    
+    background-image: url("https://static.pexels.com/photos/402023/pexels-photo-402023.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: white;
+    font-size:15;
+    border: 10px solid white;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 100px; 
+    text-align: center;
+  width: 100%;
+  max-width: 800px;
+    margin: 100 auto;
+    color: #4B4646
+  }
+
+  .container
+
+  {
+      background-color: white;
+        padding: 20px;
+}
+
+/* unvisited link */
+a:link {
+    color: #646060;
+  text-decoration: bold;
+}
+
+/* visited link */
+a:visited {
+    color: #EDEBF1;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000000;
+}
+
+/* selected link */
+a:active {
+    color: #09090A;
+} //måste komma i denna ordningen
+
+nav 
+{
+
+    background: white;
+    box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, .3);
+    padding: 5px 20px;
+    
+}
+
+
+
+nav ul li {
+    display: inline-block;
+    padding: 12px 20px;
+   
+  }
+  footer {
+    border: 5px solid #FFFDFD;
+    padding:5px;
+    margin: 5px;
+    color: white;
+    
+
+  }
+}
