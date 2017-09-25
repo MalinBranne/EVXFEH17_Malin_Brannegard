@@ -17,7 +17,7 @@
     
         
         }
-    
+
         ul
     
         {
@@ -130,26 +130,42 @@
             padding:0;
           }
     
-          nav ul li ul li:nth-last-of-type(1)
+          nav ul li ul li:nth-last-of-type(1), nav ul li ul li:nth-last-child(4n+1) a
     
           {   
              border-radius: 0px 0px 10px 10px;
-             /* gör så att sista li:en i drop down menyerna har rundade kanter */
+
+             /* gör så att sista li:en i drop down menyerna har rundade kanter, men undermenyn i undermenyn får rundade kanter på alla hover */
         
         }
+       
+        
+        /*nav li li:a:hover:last-of-type, nav li li:last-of-type a
+        
+        {
+        border radius: 0px 0px 10px 10px
+        
+        }   
     
-        nav ul li ul li a:hover:nth-last-child(1)
-        {  
-            border-radius: 0px 0px 10px 10px;
-       /* försöker göra så att endast sista li får rundade hörn när man hovrar, men der funkar inte */
-       }
-        
-        nav ul li ul li ul li a:hover:nth-last-of-type(1)  /* gör så att hörnen på li blir rundade när man hovrar övver */
-        
-              {   
-                 border-radius: 0px 0px 10px 10px;
             
-            }
+/* funkar ej. gör så att hörnen på sista li i i första underlistorna blir rundade. */
+
+
+nav li li li:nth-last-child(4n+1) a
+
+        {
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        /* gör så att skuggan på undermenyn i undermenyn bfår rundade hörn */
+
+        
+       /*.bennyeffekt {
+            border-radius: 0px 0px 10px 10px
+        }  
+        
+        /* gör en effekt som rundar hörnen- nödlösning*/ 
+  
           
           /*Döljer dropdown*/
           nav ul ul li{
@@ -176,6 +192,7 @@
               width:200px; /*samma som ul li*/
               left:100px; /*absolute position 100px ifrån sin förälder*/
               top:0px; /*absolute position högst mot sin förälder*/
+              
             
           }
             /*Färgen för undermenyer på desktoppen återställs*/

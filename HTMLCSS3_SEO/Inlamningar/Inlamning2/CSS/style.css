@@ -41,19 +41,154 @@ body {                                                  /* vår body med general
 
         
     }
-
-    nav li                                                     /* designar li i nav. Lägger länkarna i mitten och på samma rad */
-    {
-
-        display: inline;
+    label{
+        color:red;
+        line-height: 40px;
+        font-size:2em;
+        cursor:pointer;
+      }
+      
+      /*Dold chekcbox som aldrig visas*/
+      #nav-toggle {
+        display: none;
+      }
+      
+      /*Men som används för att dölja och visa menyn på mobilen*/
+      #nav-toggle:checked + #wrapper nav {
+        display: block;
+      }
+      
+      /*Menyn döljs på mobilen som default*/
+      nav {
+        display: none;	
+          text-transform: uppercase;
+      }
+      
+      nav a{
+          display:block;
+          text-decoration: none;
+          font-family: merriweather;
+          font-weight: bold;
+          font-size:10pt;
+          color:#112233;
         
-        margin:1em
+      }
+      
+      nav a:hover{
+          background:#223433;
+          color:#f0f1f5;
+      }
+      
+      nav ul{
+          list-style: none;
+        opacity:0.8;
         
+      }
+      
+      nav ul li{
+        background:skyblue;
+        line-height: 40px;
+        padding-left:50px;
+      }
+      
+      /*Den första undermenyn färgläggs lite annorlunda på mobilen för att kunna skiljas från övre li*/
+      nav ul li ul li a{
+        color:yellow;
+      }
+      
+      /*Den andra undermenyn färgläggs lite annorlunda på mobilen för att kunna skiljas från övre li*/
+      nav ul ul li ul a{
+        color:white;
+      }
+      
+      @media all and (min-width: 630px){
+      /*Tecknet för mobil menyn döljs på desktop*/
+        label
+        {
+          display:none;
+        } 
+        
+        /*Menyn på desktoppen*/
+        nav {
+          height:40px;
+          width:505px;/*beror på vilken bredd man satt på de enskilda li, i detta fall är de 5 li*100px+margin-right på 1px*/ 
+          display:block;
+          margin:0 auto; /*centrar ul inuiti naven*/
+      
+      }
+        /*Alla ul li centreras på desktoppen*/
+        nav ul{
+          text-align:center;
+        }  
+      
+       /*Menyn på desktoppen*/
+      nav ul li{
+          float:left;/*gör att den flyter till vänster*/
+          width:100px;
+          height:40px;
+        margin-right:1px;
+        padding:0;
+      }
+
+      nav ul li ul li:nth-last-of-type(1)
+
+      {   
+         border-radius: 0px 0px 10px 10px;
+         /* gör så att sista li:en i drop down menyerna har rundade kanter */
+    
     }
 
-   a {
-    text-decoration: none;                                      /* Tar bort stylingen av länkarna */
-    }
+    nav ul li ul li a:hover:nth-last-child(1)
+    {  
+        border-radius: 0px 0px 10px 10px;
+   /* försöker göra så att endast sista li får rundade hörn när man hovrar, men der funkar inte */
+   }
+    
+    nav ul li ul li ul li a:hover:nth-last-of-type(1)  /* gör så att hörnen på li blir rundade när man hovrar övver */
+    
+          {   
+             border-radius: 0px 0px 10px 10px;
+        
+        }
+      
+      /*Döljer dropdown*/
+      nav ul ul li{
+          position:relative; /* sätter positionen till vara relativt till sin behållare*/
+          display:none;
+      }
+      
+      /*Döljer submenyn i dropdown*/
+      nav ul ul ul{
+          display:none;
+        
+      }
+      
+      /*Visar dropdown vid hover på ul li*/
+      nav ul li:hover ul li{
+          display: block;
+        
+      }
+      
+      /*Visar submenyn i dropdown*/
+      nav ul ul li:hover ul{
+          display:block;
+          position:absolute; /*sätter positionen till att absolute mot sin förälder som är satt till att vara relativt*/
+          width:200px; /*samma som ul li*/
+          left:100px; /*absolute position 100px ifrån sin förälder*/
+          top:0px; /*absolute position högst mot sin förälder*/
+        
+      }
+        /*Färgen för undermenyer på desktoppen återställs*/
+        nav ul li ul li a{
+        color:#112233;
+      }
+        /*Färgen för undermenyer på desktoppen återställs*/
+        nav ul ul li ul a{
+        color:#112233;
+      }
+      }
+      
+
 
     /* unvisited link */
 a:link {                                                       /* väljer färg på länken */
@@ -74,12 +209,15 @@ color:greenyellow;                                             /* byter färg p�
 
 .syndicate                                                         /* designar bakgrunden som våra artiklar ligger på */
 {
-    background-color: slategrey;
+background-color: slategrey;
 margin: 1em;
 padding:1em;
 box-shadow: 0px 3px 1px purple;
 
+
 }
+
+
 
 .syndicate p                                                         /* designar texten i artiklarna */   
 
@@ -94,6 +232,14 @@ margin-bottom: 0,5em;
     margin: 0,5em;
 }
 
+.syndicate:nth-of-type(3n+2)
+
+{
+
+    background-color:slateblue;
+
+}
+
 .blog_summary                                                       /* byter bakgrundsfärg på blog_summary */
 
 {
@@ -105,6 +251,7 @@ margin-bottom: 0,5em;
 .blog_summary li                                                    /* designar li i blog_summary */
 
 {
+    list-style: none;
     margin: 0,5em;
     padding: 0,5 em;
 

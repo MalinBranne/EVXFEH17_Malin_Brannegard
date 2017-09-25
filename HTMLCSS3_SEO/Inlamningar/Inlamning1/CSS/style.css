@@ -19,28 +19,31 @@ body {
     margin: 100 auto;
     color: #4B4646
   }
+   
 
-  .container
+  .main
+  
 
   {
       background-color: white;
         padding: 20px;
+        
 }
 
 /* unvisited link */
 a:link {
-    color: #646060;
-  text-decoration: bold;
+    color: white;
+  text-decoration: none;
 }
 
 /* visited link */
 a:visited {
-    color: #EDEBF1;
+    color: white;
 }
 
 /* mouse over link */
 a:hover {
-    color: #000000;
+    color: #4B4646
 }
 
 /* selected link */
