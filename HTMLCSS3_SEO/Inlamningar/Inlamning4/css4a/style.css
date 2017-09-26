@@ -1,0 +1,202 @@
+html,header, footer, body, nav, div, img, a,ul, li, h1, h2{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+/* normalizer, nollställer alla default värden i webläsaren */
+
+nav ul{
+  display:flex;
+  justify-content:space-around;
+	flex-flow: column wrap;
+	list-style: none;
+	text-align: center;
+   position: relative; 
+	}
+
+
+nav ul ul{
+  display: none;
+  position: absolute;
+}
+
+nav ul li a{
+	color: black;
+	text-decoration: none;
+  }
+
+nav ul li:hover ul{
+  display:block;
+}
+
+nav ul li a{
+  display:block;
+}
+ 
+/* navigerings menyn flex-inställningar ovan */
+
+
+  .container
+
+  {
+    display: flex;
+    flex-direction: column;  /*gör så att flödet lägger sig i column på mobilen*/
+    justify-content: center;
+    width: 100%;
+    margin:50px;
+    padding: 10px;
+    color: white;
+    background-color: #555 ;
+  }
+  
+  .card
+
+  {
+    display: flex;
+    flex-direction: column;
+    width: 50%
+      
+      
+/*       kan inte lägga in align-self:center; eller justify-content: center for att centrera innegållet. När man testar blir carden på olika rader  */
+    
+
+        
+}  
+
+.card:nth-child(1)
+
+{
+  background-color: lightgrey;
+  margin-bottom: 5%; 
+  padding: 10px;
+  align-self: center;
+  /*padding eller margin funkar inte på card 1 och 2. varför?*/
+    
+
+  
+}
+
+.card:nth-child(2)
+
+{
+  background-color: blue;
+  margin-bottom: 5%; 
+  padding: 10px;
+  align-self: center;
+  /*padding eller margin funkar inte på card 1 och 2. varför?*/
+}
+
+.card:nth-child(3)
+
+{
+  background-color: black;
+  width: 100%;
+  align-self: center;
+  margin-bottom: 5%;
+  padding: 10px;
+  
+  
+}
+
+  .header
+
+  {
+    font-size: 120%; 
+    font-weight: 700; 
+    
+  }
+  .contact_1
+
+  {
+    display: flex;
+    
+  }
+  
+  .left_1
+  
+  {
+    flex: 1;
+    text-align: left;
+    
+  }
+  
+  
+  .right_1
+  
+    {
+      
+    flex: 1;
+    text-align: right;
+    
+  }
+  
+ .main_content  
+
+{
+ text-align: center;
+  
+} 
+ 
+
+ 
+  
+  
+    .contact
+
+  {
+    display: flex;
+    
+  }
+  
+  .left
+  
+  {
+    flex: 1;
+    text-align: left;
+    
+  }
+  
+  
+  .right
+  
+    {
+    flex: 1;
+    text-align: right;
+    
+  }
+
+footer
+
+{
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+@media (min-width: 816px)   /*för webben*/
+
+{
+	nav ul {
+  flex-flow: row wrap;
+
+
+}
+  
+  .container
+ 
+
+  {
+     flex-flow:row wrap; */
+     width: 50%;
+     align-items: center;
+    
+    
+  }
+  
+  
+
+

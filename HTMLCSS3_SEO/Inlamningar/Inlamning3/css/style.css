@@ -151,7 +151,7 @@
 /* funkar ej. gör så att hörnen på sista li i i första underlistorna blir rundade. */
 
 
-nav li li li:nth-last-child(4n+1) a
+.bennyeffekt ul li:last-child
 
         {
             border-radius: 0px 0px 10px 10px;
