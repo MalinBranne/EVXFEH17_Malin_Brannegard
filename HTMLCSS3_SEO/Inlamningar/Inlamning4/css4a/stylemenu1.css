@@ -1,0 +1,378 @@
+* {
+    font-family: merriweather;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+ 
+}
+
+
+
+/* universal selector med inställningar som gäller hela sidan, kan inte överskrivas */
+
+body {
+    /* vår body med generalla inställningar som påvergar hela sidan/all inom body taggen */
+    background: url(https://static.pexels.com/photos/414630/pexels-photo-414630.jpeg) no-repeat;
+    background-size:auto auto;
+	background-size:cover;
+
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+   
+
+    
+}
+
+ul {
+    text-decoration-style: none;
+}
+
+li {
+    text-decoration-style: none;
+}
+
+
+
+label {
+    color: #AAB6E5;
+    line-height: 40px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+/*Dold chekcbox som aldrig visas*/
+
+#nav-toggle {
+    display: none;
+}
+
+
+/*Men som används för att dölja och visa menyn på mobilen*/
+
+#nav-toggle:checked+#wrapper nav {
+    display: block;
+}
+
+
+/*Menyn döljs på mobilen som default*/
+
+nav {
+    display: none;
+    text-transform: uppercase;
+    text-align: center;
+    /*background-color: #333;*/
+    width: 100%
+    
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    font-family: merriweather;
+    font-weight: bold;
+    font-size: 10pt;
+    color: #112233;
+}
+
+nav a:hover {
+    background: #223433;
+    color: #f0f1f5;
+}
+
+nav ul {
+    list-style: none;
+    opacity: 0.8;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    flex-flow: column wrap;
+    position: relative;
+    text-align: center;
+}
+
+nav ul li {
+    background: skyblue;
+    line-height: 40px;
+    width: 130;
+}
+nav ul ul{
+    opacity: 1;
+}
+
+/*Den första undermenyn färgläggs lite annorlunda på mobilen för att kunna skiljas från övre li*/
+
+nav ul li ul li a {
+    color: #E7E7A3;
+}
+
+
+/*Den andra undermenyn färgläggs lite annorlunda på mobilen för att kunna skiljas från övre li*/
+
+nav ul ul li ul a {
+    color: white;
+    
+}
+.container
+
+  {
+    display: flex;
+    flex-direction: column;  /*gör så att flödet lägger sig i column på mobilen*/
+    justify-content: center;
+    width: 100%;
+    /*margin:50px;*/ /*lägger man till margin så hamnar containern fel, något åt vänster*/
+    padding: 10px;
+    color: #B39595;
+    background-color: #DED7D7 ;
+    align-content: center;
+
+  }
+  
+  .card
+
+  {
+    display: flex;
+    flex-direction: column;
+    width: 50%
+      
+      
+/*       kan inte lägga in align-self:center; eller justify-content: center for att centrera innegållet. När man testar blir carden på olika rader  */
+    
+
+        
+}  
+
+
+.card img
+{
+/*margin: 20px; */
+align-self: center;
+width:100%;
+height: auto;
+
+}
+.card:nth-child(1)
+
+{
+  background-color: #F3D59A;
+  margin-bottom: 5%; 
+  padding: 10px;
+  align-self: center;
+  /*padding eller margin funkar inte på card 1 och 2. varför?*/
+    
+
+  
+}
+
+.card:nth-child(2)
+
+{
+  background-color: #C7C7EF;
+  margin-bottom: 5%; 
+  padding: 10px;
+  align-self: center;
+  /*padding eller margin funkar inte på card 1 och 2. varför?*/
+}
+
+.card:nth-child(3)
+
+{
+  background-color: #F4BAF4;
+  width: 100%;
+  align-self: center;
+  margin-bottom: 5%;
+  padding: 10px;
+  
+  
+}
+
+  .header
+
+  {
+    font-size: 120%; 
+    font-weight: 700; 
+    margin: 5px;
+    
+    
+  }
+  
+
+  
+    .contact
+
+  {
+    margin: 5px;
+    display: flex;
+    
+  }
+  
+  .left
+  
+  {
+    flex: 1;
+    text-align: left;
+    
+  }
+  
+  
+  .right
+  
+    {
+    flex: 1;
+    text-align: right;
+    
+  }
+  .main_content  
+  
+  {
+   text-align: center;
+    
+  } 
+
+footer
+
+{
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+@media all and (min-width: 630px) {
+    /*Tecknet för mobil menyn döljs på desktop*/
+
+.container
+
+    {
+        flex-flow:row wrap; */
+        width: 50%;
+        align-items: center;
+       
+       
+     }
+
+     /*.body
+
+     {
+        align-items:  center;
+    
+    }  vill att allt ska ligga i mitten av sidan men det funkar ej. hjälp?*/
+    label {
+        display: none;
+    }
+    /*Menyn på desktoppen*/
+    nav {
+        
+        display: flex;
+        justify-content: space-around;
+        height: 40px;
+        width: 505px;
+        /*beror på vilken bredd man satt på de enskilda li, i detta fall är de 5 li*100px+margin-right på 1px*/
+        display: block;
+        margin: 0 auto;
+        /*centrar ul inuiti naven*/
+        
+    }
+    /*Alla ul li centreras på desktoppen*/
+    nav ul {
+        text-align: center;
+        flex-flow: row wrap;
+        opacity: 0.7;
+    }
+    /*Menyn på desktoppen*/
+    nav ul li {
+
+        width: 100px;
+        height: 40px;
+        margin-right: 1px;
+        padding: 0;
+    }
+    nav ul li ul li:nth-last-of-type(1),
+    nav ul li ul li:nth-last-child(4n+1) a {
+        border-radius: 0px 0px 10px 10px;
+        /* gör så att sista li:en i drop down menyerna har rundade kanter, men undermenyn i undermenyn får rundade kanter på alla hover */
+    }
+    /*nav li li:a:hover:last-of-type, nav li li:last-of-type a
+  
+          
+  
+          {
+  
+          border radius: 0px 0px 10px 10px
+  
+          
+  
+          }   
+  
+      
+  
+              
+  
+  /* funkar ej. gör så att hörnen på sista li i i första underlistorna blir rundade. */
+    nav li li li:nth-last-child(4n+1) a {
+        border-radius: 0px 0px 10px 10px;
+    }
+    /* gör så att skuggan på undermenyn i undermenyn bfår rundade hörn */
+    /*.bennyeffekt {
+  
+              border-radius: 0px 0px 10px 10px
+  
+          }  
+  
+          
+  
+          /* gör en effekt som rundar hörnen- nödlösning*/
+    /*Döljer dropdown*/
+    nav ul ul li {
+        position: relative;
+        /* sätter positionen till vara relativt till sin behållare*/
+        display: none;
+    }
+    /*Döljer submenyn i dropdown*/
+    nav ul ul ul {
+        display: none;
+    }
+    /*Visar dropdown vid hover på ul li*/
+    nav ul li:hover ul li {
+        display: block;
+    }
+    /*Visar submenyn i dropdown*/
+    nav ul ul li:hover ul {
+        display: block;
+        position: absolute;
+        /*sätter positionen till att absolute mot sin förälder som är satt till att vara relativt*/
+        width: 200px;
+        /*samma som ul li*/
+        left: 100px;
+        /*absolute position 100px ifrån sin förälder*/
+        top: 0px;
+        /*absolute position högst mot sin förälder*/
+    }
+    /*Färgen för undermenyer på desktoppen återställs*/
+    nav ul li ul li a {
+        color: #112233;
+    }
+    /*Färgen för undermenyer på desktoppen återställs*/
+    nav ul ul li ul a {
+        color: #112233;
+    }
+}
+
+
+/* unvisited link */
+
+a:link {
+    /* väljer färg på länken */
+    color: white;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    /* Ändrar färg när man hoovrar över länken */
+    color: #555
+}
