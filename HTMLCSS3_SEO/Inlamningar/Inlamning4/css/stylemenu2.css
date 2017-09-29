@@ -1,0 +1,431 @@
+* {
+    font-family: merriweather;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+ 
+}
+
+
+
+/* universal selector med inställningar som gäller hela sidan, kan inte överskrivas */
+
+body {
+    /* vår body med generalla inställningar som påvergar hela sidan/all inom body taggen */
+    background: url(https://static.pexels.com/photos/414630/pexels-photo-414630.jpeg) no-repeat;
+    background-size:auto auto;
+	background-size:cover;
+
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+   
+
+    
+}
+
+ul {
+    text-decoration-style: none;
+}
+
+li {
+    text-decoration-style: none;
+}
+
+
+
+label {
+    color: #AAB6E5;
+    line-height: 40px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+/*Dold chekcbox som aldrig visas*/
+
+#nav-toggle {
+    display: none;
+}
+
+
+/*Men som används för att dölja och visa menyn på mobilen*/
+
+#nav-toggle:checked+#wrapper nav {
+    display: block;
+}
+
+
+/*Menyn döljs på mobilen som default*/
+header
+
+{
+
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+
+
+nav {
+
+    
+
+    display: none;
+    text-transform: uppercase;
+    /*background-color: #333;*/
+    width: 100%
+    
+    
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    font-family: merriweather;
+    font-weight: bold;
+    font-size: 10pt;
+    color: #112233;
+    border-radius: 50px 50px 0px 0px;  /* rundar hörnen på meny-fliken när man hovrar */
+
+}
+
+nav a:hover {
+    background: #223433;
+    color: #f0f1f5;
+    
+}
+
+nav ul {
+    list-style: none;
+    opacity: 0.8;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    flex-flow: column wrap;
+    position: relative;
+    text-align: center;
+    display: flex;
+    
+}
+
+nav ul li {
+    line-height: 40px;
+    width: 130;
+    border-radius: 50px 50px 0px 0px; /* rundar hörnen på meny-fliken */
+}
+
+
+
+nav ul li:nth-child(1)
+
+{
+    flex: 1;
+    background:yellow;
+
+}
+
+nav ul li:nth-child(2)
+
+{
+    flex: 1;
+    background:#0FFF00;
+
+}
+
+nav ul li:nth-child(3)
+
+{
+    flex: 1;
+    background:#0092FF;
+
+}
+
+nav ul li:nth-child(4)
+
+{
+    flex: 1;
+    background:#FF00E1;
+
+}
+nav ul li:nth-child(5)
+
+{
+    
+    flex: 3;
+    background:#F6E8E8;
+
+}
+
+
+    input[type=text]:focus {
+        width: 40%;
+    } 
+
+    input[type=search]
+    {
+               width: 10%;
+           }
+        .searchbar
+
+        {width:10%}
+/* väljer bredd på searchbaren */
+
+
+
+
+.container
+
+  {
+    display: flex;
+    flex-direction: column;  /*gör så att flödet lägger sig i column på mobilen*/
+    justify-content: center;
+    width: 70%;
+    /*margin:50px;*/ /*lägger man till margin så hamnar containern fel, något åt vänster*/
+    padding: 10px;
+    color: #B39595;
+    background-color: #DED7D7 ;
+    align-content: center;
+
+  }
+  
+
+  /*
+.top
+
+{
+
+    background-color: white;
+    color: black;
+    width:100%;
+    padding: 10px;
+    
+}*/
+  
+  .card
+
+  {
+    display: flex;
+    flex-direction: column;
+    width: 50%
+      
+      
+/*       kan inte lägga in align-self:center; eller justify-content: center for att centrera innegållet. När man testar blir carden på olika rader  */
+    
+
+        
+}  
+
+
+.card img
+{
+/*margin: 20px; */
+align-self: center;
+width:100%;
+height: auto;
+
+}
+.card:nth-child(1)
+
+{
+  background-color: #F3D59A;
+  margin-bottom: 5%; 
+  padding: 10px;
+  align-self: center;
+  /*padding eller margin funkar inte på card 1 och 2. varför?*/
+    
+
+  
+}
+
+.card:nth-child(2)
+
+{
+  background-color: #C7C7EF;
+  margin-bottom: 5%; 
+  padding: 10px;
+  align-self: center;
+  /*padding eller margin funkar inte på card 1 och 2. varför?*/
+}
+
+.card:nth-child(3)
+
+{
+  background-color: #F4BAF4;
+  width: 100%;
+  align-self: center;
+  margin-bottom: 5%;
+  padding: 10px;
+  
+  
+}
+
+  .header
+
+  {
+    font-size: 120%; 
+    font-weight: 700; 
+    margin: 5px;
+    
+    
+  }
+  
+
+  
+    .contact
+
+  {
+    margin: 5px;
+    display: flex;
+    
+  }
+  
+  .left
+  
+  {
+    flex: 1;
+    text-align: left;
+    
+  }
+  
+  
+  .right
+  
+    {
+    flex: 1;
+    text-align: right;
+    
+  }
+  .main_content  
+  
+  {
+   text-align: center;
+    
+  } 
+  
+  i 
+
+  {
+
+    font-size:1em; 
+  }
+
+  .page
+  
+  {
+  
+      display: flex;
+      flex-direction: row;
+      
+  
+  }
+  
+  aside
+  
+  {
+      
+      background-color: gray;
+      color: white;
+      width: 30%;
+  
+  }
+  
+footer
+
+{
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+@media all and (min-width: 630px) {
+    /*Tecknet för mobil menyn döljs på desktop*/
+
+
+
+     /*.body
+
+     {
+        align-items:  center;
+    
+    }  vill att allt ska ligga i mitten av sidan men det funkar ej. hjälp?*/
+    label {
+        display: none;
+    }
+    /*Menyn på desktoppen*/
+    nav {
+        
+        display: flex;
+        justify-content: space-around;
+        height: 100px;
+        width: 100%;
+        /*beror på vilken bredd man satt på de enskilda li, i detta fall är de 5 li*100px+margin-right på 1px*/
+        display: block;
+        margin: 0 auto;
+        /*centrar ul inuiti naven*/
+        
+    }
+    /*Alla ul li centreras på desktoppen*/
+    nav ul {
+        text-align: center;
+        flex-flow: row wrap;
+        opacity: 0.7;
+    }
+    /*Menyn på desktoppen*/
+    nav ul li {
+
+        width: 20%;
+        height: 40px;
+        margin-right: 1px;
+        padding: 0;
+    }
+
+
+a:link {
+    /* väljer färg på länken */
+    color: white;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    /* Ändrar färg när man hoovrar över länken */
+    color: #555
+}
+
+
+.page
+
+{
+
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+aside
+
+{
+    
+    background-color: gray;
+    color: white;
+    width: 30%;
+
+}
+
+.container
+
+
+    {
+        flex-flow:row wrap; */
+        width: 50%;
+        align-items: center;
+       
+       
+     }
