@@ -42,19 +42,6 @@
 }
 
 
-  /*///Mixin for buttons
-  @mixin button-bg($bg) {
-  background: $bg;
-  @extend %btn;
-  &:hover {
-    background:darken($bg,8%);
-    transition: all 0.3s ease;
-  }
-  &:active {
-    background:darken($bg,25%);
-  } 
-}*/
-
 /*Min Mixin med förbestämt default värde*/
 
 @mixin border_radius($radius:20px){
@@ -72,4 +59,5 @@
   
   }
   
-
+  
+  

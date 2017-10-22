@@ -184,7 +184,7 @@
      a:focus .caption,
          a:hover .caption {
  
-       background: gray;
+       background: $dark;
        
        position: relative;
              opacity: 0.5;
@@ -197,7 +197,6 @@
             @include respond-to("large"){
                 
              
-
  /*tar bort max bredden på body*/
             body
             {
@@ -262,6 +261,7 @@
  
  
  }
+ 
  
  
 
