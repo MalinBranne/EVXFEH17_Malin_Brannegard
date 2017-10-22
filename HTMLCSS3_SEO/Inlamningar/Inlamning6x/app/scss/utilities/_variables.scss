@@ -20,10 +20,11 @@ $color: (
   accent1: #ffd166,
   nav: slategrey,
   facebook: blue,
-  text-color: black,
-   hovercolor: pink,
-   dark: slategrey,
-   bright: white
+  accent4: #0a3a4a,
+  dark: #282828,
+  gray: #e1e1e1,
+  darkgrey: #666,
+  bright: #f5f5f5
 ) !default;
 
 
@@ -50,4 +51,3 @@ $breakpoints: (
   'large':  ( min-width: 62.000em ),
   'wide':  ( min-width: 75.000em )
 ) !default;
-

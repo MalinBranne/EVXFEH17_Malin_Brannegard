@@ -1,28 +1,23 @@
+.grid_container {
+	    display:grid;
+	    grid-template-columns: 1fr;
+	    grid-gap: 2em;
+	    margin-top: 2em;
+	
+	}
 
-
-* {font-family: arial;}
-
-
-/*normalizer*/
-html,header, footer, body, nav, div, img, a,ul, li, h1, h2{
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	list-style-type: none;
-}
-
-
-
-body{
-  background-color: white;
-     width: 100%;
-     max-width: 800px;
- margin: 0 auto;
- 
-   
- }
-
- /*exempel på mixin*/
- 
- 
- 
+	@include respond-to("small"){
+	.grid_container {
+	    grid-gap: 2em;
+	    grid-template-columns:repeat(2, 1fr);
+	}
+	
+	}
+	
+	
+	@include respond-to("large"){
+	    
+	    .grid_container {
+	        grid-gap: 2em;
+	        grid-template-columns:repeat(3, 1fr);
+	}}

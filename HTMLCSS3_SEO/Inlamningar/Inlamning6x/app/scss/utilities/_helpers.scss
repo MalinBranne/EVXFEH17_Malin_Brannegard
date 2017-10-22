@@ -2,54 +2,20 @@
 
 ///Button placeholder
 %btn{
-	
-	text-decoration:none;
-	padding:5%;
-   margin: 10px;
-   display: flex;
-   align-items: flex-end;	
+	width: 200px;
+  height: 200px;
+	border-radius: 50%;
+	color:white;
+ text-decoration:none;
+ padding:5%;
+margin: 10px;	
+ font-family: 'Poiret One', cursive;
+font-size:1.5em;
 }
-
-
-//Placeholders and classes: ;
-
-
-
 
 %fonticons {
 	color:white;
 	font-size: 2em;
-	margin:0.1em;
-
-
+margin:0.1em;
 
 }
-
-
-
-%tags{
-	font-style: italic;
-	font-weight: bold;}
-
-%headfoot
-{
-  border-top: solid grey 3px;
-  border-bottom: solid grey 3px;
-  color: black;
-  padding:10px;
-  margin: 20px 0px 20px 0px;
-  display:flex;
-  justify-content:space-between;
-  align-items: flex-end;
-}
-
-
-
-
- 
-
-
-
- 
-
-
