@@ -1,0 +1,100 @@
+/* använder nesting*/
+
+.main_nav {
+    width: 100%;
+    font-size: 1em;
+    background: slategrey;
+    .triggs {
+        display: none;
+        position: absolute;
+    }
+    label {
+        position: relative;
+        cursor: pointer;
+        font-size: 150%;
+    }
+    .fa-bars {
+        font-size: 120%;
+    }
+    ul {
+        display: none;
+        margin-left: 10px;
+        margin-top: 10px;
+        a {
+            color: white;
+        }
+        li {
+            margin-top: 20px;
+            align-self: center;
+        }
+        .important_class {
+            color: whitesmoke;
+        }
+        ul a {
+            @extend .important_class;
+            /*använder  extend*/
+        }
+        ul ul a {
+            color: lightblue;
+        }
+        ul ul {
+            margin-left: 20px;
+            margin-top: 1.2em;
+        }
+        ul ul li {
+            margin-left: 20px;
+            margin-top: 0.3em;
+        }
+        .main_menu {
+            font-size: 120%;
+            margin-top: 1em;
+        }
+        .triggs:checked~ul,
+        .triggs:checked~ul ul {
+            display: block !important;
+        }
+        a:hover {
+            color: black;
+        }
+        h5 {
+            font-size: 1.1em;
+        }
+    }
+}
+
+@supports (grid-area: auto) {
+    @include respond-to("small") {
+        //Desktop nav start
+        .main_nav {
+            label {
+                display: none;
+            }
+            ul {
+                display: block;
+            }
+            .main_menu {
+                display: flex;
+                justify-content: space-around;
+            }
+            ul {
+                display: none;
+                padding: 1em;
+                font-size: 1em;
+            }
+            li:hover ul {
+                display: block;
+            }
+            .mega_menu {
+                z-index: 999;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                position: absolute;
+                background-color: slategrey;
+                width: 60%;
+                @include border_radiusbottom;
+                /*Kallar på mixin */
+                opacity: 0.9;
+            }
+        }
+    }
+}

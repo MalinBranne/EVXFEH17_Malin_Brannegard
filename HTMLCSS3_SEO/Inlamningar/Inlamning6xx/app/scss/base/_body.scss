@@ -1,0 +1,13 @@
+body {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+@include respond-to("large") {
+    /*tar bort max bredden på body*/
+    body {
+        max-width: none;
+    }
+}

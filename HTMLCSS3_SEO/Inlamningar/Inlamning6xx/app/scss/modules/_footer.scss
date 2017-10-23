@@ -1,0 +1,26 @@
+/*styling + nesting*/
+
+footer {
+    @extend .top_logo;     /*använder extend, hämtar inställningar från annan klass*/
+    font-size: 1em;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    a {
+        color: black;
+    }
+    .tags p {
+        font-style: italic;
+        font-weight: bold;
+    }
+    /*positionerar knapparna med flex*/
+    .buttons {
+        @extend %btn;  /*använder extend placeholder*/
+        display: flex;
+        align-items: flex-end;
+    }
+    i {
+        @extend %fonticons; /*använder extend placeholder*/
+    }
+}

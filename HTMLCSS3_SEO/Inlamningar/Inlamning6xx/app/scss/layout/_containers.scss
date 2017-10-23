@@ -1,0 +1,21 @@
+@supports (grid-area: auto) {
+    @include respond-to("small") {
+        /*sätter grid på brytpunkt 2 och nollställer margin som ersätts av grid-gap*/
+        .card_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 3em 0;
+            /*3em ger mer gap under bilden så att caption får plats när man hovrar*/
+            padding: 0.5em;
+            grid-gap: 3em;
+        }
+    }
+    @include respond-to("large") {
+        /*skapar gridden på sista brytpunkten*/
+        .card_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 150px 150px 150px 150px;
+        }
+    }
+}
