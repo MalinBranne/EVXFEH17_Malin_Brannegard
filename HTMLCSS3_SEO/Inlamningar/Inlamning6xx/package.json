@@ -6,21 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MalinBranne/EVXFEH17_HTMLCSS3_SEO.git"
-  },
+ 
   "keywords": [
     "tenta",
     "html",
     "css"
   ],
-  "author": "Sohail Hasware <saab.viggen@live.se>",
+
   "license": "MIT",
-  "bugs": {
-    /*"url": "https://github.com/MalinBranne/EVXFEH17_HTMLCSS3_SEO/issues"
-  },
-  "homepage": "https://github.com/MalinBranne/EVXFEH17_HTMLCSS3_SEO/#readme",*/
+  
   "dependencies": {
     "browser-sync": "2.18.13",
     "del": "3.0.0",
