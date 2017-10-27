@@ -1,0 +1,17 @@
+footer{@extend %borders;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 10em; /*fallback eftersom att yttre gridden inte funkar*/
+background: map-get($color, dark);
+color: map-get($color, bright);
+}
+@include respond-to("small"){
+    footer{grid-area: foot;
+ 
+    }
+
+
+
+
+  }

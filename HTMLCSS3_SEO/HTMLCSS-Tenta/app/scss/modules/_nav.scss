@@ -1,0 +1,78 @@
+
+  
+  /*nav styling, har inte nästat så mycket för att undvika problem*/
+nav{
+    background: map-get($color, dark);
+  }
+  
+  nav ul{
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+  }
+  
+  nav a{
+    color: map-get($color, bright);
+  }
+  
+  nav a:hover{
+    text-decoration:none;
+  }
+  
+  
+  /*desktop grid layout*/
+
+  
+  @media only screen and (max-width:59em){
+    /*off-canvas menu*/
+    #nav{
+      transition: transform .3s ease-in-out;
+        top: 0;
+        bottom: 0; 
+        max-width: 60em;  
+        position: fixed; /* gör så att innehållet kan scrolla bakom*/
+        width: 300px;
+        left: -340px; /*lägg menyn utanför skärmen -340px*/
+        z-index: 999; /*gör så att menyn lägger sig framför allt*/
+    }
+    
+    /*URL-adresser med en # följd av en ankare med namnlänk till ett visst element i ett dokument. Elementet som är länkas till är själva målelementet.
+    */
+      #nav:target {     
+        transform: translateX(340px);
+      }
+    
+      .close {
+        text-align: right;
+        display: block;
+        text-decoration: none;
+        font-size: 3em;
+        position: relative;
+        top: -30px;
+      }    
+  }
+  
+
+  
+  @include respond-to("small"){
+    
+    nav{grid-area: head;
+    width: 100%;}
+    /*display menu with flex*/
+    nav ul
+{
+      display:flex;
+      justify-content:center;
+    }
+    
+    nav ul li{
+      padding: 0 20px 0 0;
+      
+    }
+    
+    .toggle{
+      display:none;
+    }
+  }
+  
+  

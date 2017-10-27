@@ -1,0 +1,60 @@
+.main_content { /*grid container för korten*/
+  
+  grid-gap: 20px;
+  min-height: 100vh;
+  margin-top: 1em;
+  margin-bottom: 1em;
+} 
+
+@include respond-to("small"){
+  /*huvud-griden som funkade i början, men slutade funka. har inte gjort några ändringar så koden ska va rätt.*/
+  .container {
+
+    grid-template-columns: 1fr 4fr 2fr 1fr;
+    grid-template-rows: 10em 50vh auto 10em;
+    
+    grid-template-areas: "head head head head" 
+                        "hero hero hero hero" 
+                        ". main aside ." auto
+                        "foot foot foot foot";
+
+    /*
+    
+    Grid med short hand - funkar inte men är skrivet rätt:
+    
+    grid-template: "head head head head" 10em / 1fr 3fr 2fr 1fr
+                                           "heroimage heroimage heroimage heroimage" 50vh / 1fr 3fr 2fr 1fr
+                                           "article article aside" auto/ 1fr 3fr 2fr 1fr
+                                           "foot foot foot foot" 10em / 1fr 3fr 2fr 1fr;
+                       grid-auto-rows: 200px;
+                       grid-gap: 1.5em;*/
+  }
+  
+  .main_content { /*grid container för korten*/
+    grid-area: main;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto auto; 
+    grid-template-columns: 200px 200px 200px 200px 200px; /* funkar ej att skriva 1fr, gridsen lägger sig helt cp då*/
+
+  
+  } 
+
+
+  
+  .portfolio /* grid-container för nedre delen av sidan*/
+  {
+
+    grid-column: 2/5;
+    grid-row: 4/9;
+    
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap:1em;
+
+
+  }
+
+}

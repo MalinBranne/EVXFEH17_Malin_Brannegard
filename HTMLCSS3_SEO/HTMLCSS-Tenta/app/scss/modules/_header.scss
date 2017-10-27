@@ -1,0 +1,27 @@
+header
+{@extend %borders; /*använder mig av egen-gjord placeholder. placeholdern måste ligga utanför brytpunkterna */
+  background:map-get($color, dark); /*använder map-get för att hämta färg från karta*/
+  color:map-get($color, bright); /*använder map-get för att hämta färg från karta*/
+  display:flex;
+  flex-direction: column;
+
+  h1{
+    text-align: center;  /*centrerar h1.*/
+}
+
+a{@extend %fonticons;}
+
+}
+
+@include respond-to("small"){
+    header{
+      grid-area: head;
+      
+    h1 {margin-top: 60px;
+      margin-bottom: 0px;
+   }
+
+  
+  }
+ 
+  } /*stänger brytpunkten*/

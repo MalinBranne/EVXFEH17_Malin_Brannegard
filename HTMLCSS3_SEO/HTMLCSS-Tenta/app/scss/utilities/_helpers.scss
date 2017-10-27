@@ -15,5 +15,10 @@
 	margin: 0.1em;
 }
 
+%portfolio-items
+{ background: map-get($color, dark);
+	color: map-get($color, light);
+}  /** egen place holder och kalla rpå färg i map*/
+
 %borders { 
 	border:solid  5px black;}
