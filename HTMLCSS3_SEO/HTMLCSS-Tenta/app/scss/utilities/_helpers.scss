@@ -10,7 +10,10 @@
 }
 
 %fonticons {
-	color: rgb(153, 167, 226);
+	color: map-get($color, light); /*hämtar färg från karta*/
 	font-size: 2em;
 	margin: 0.1em;
 }
+
+%borders { 
+	border:solid  5px black;}
