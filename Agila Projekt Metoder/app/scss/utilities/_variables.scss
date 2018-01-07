@@ -1,0 +1,60 @@
+/// @author Sohail Hasware
+/// Fonts
+@import url('https://fonts.googleapis.com/css?family=Barlow|Indie+Flower|Spectral+SC');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/// Text setup
+$text: (
+  body: ('Barlow', sans-serif),
+ 
+  body-size: 20pt,
+  headline:('Brush Script MT', cursive),
+  headline-weight: 100,
+  
+  headline-size-big: 40pt,
+  
+  
+) !default;
+
+
+/// COLORS map
+$color: (
+  main: rgb(255, 255, 255),
+  accent1: #F1BB87,
+  accent2: #F6A78B,
+  accent3: #5D675B,
+  accent4: #B6D7B9,
+  accent5: #102542,
+
+  dark: #000000,
+  bright: #FFFFFF
+) !default;
+
+
+/// Color def map for page-layout using color map
+$color-defs: (
+  body: map-get($color, main),
+  text: map-get($color, dark),
+  link: map-get($color, accent2),
+
+  header: map-get($color, accent2),
+  header-text: map-get($color, bright),
+
+ 
+  form: map-get($color, main),
+
+  button-default: map-get($color, bright),
+  button-default-text: map-get($color,accent3),
+
+  input-field: map-get($color, bright),
+  input-field-text: map-get($color, dark),
+) !default;
+
+
+/// Breakpoint map
+$breakpoints: (
+  'small':  ( min-width:  40.000em ),
+  'large':  ( min-width: 62.000em ),
+) !default;
+
+

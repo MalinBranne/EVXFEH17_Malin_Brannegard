@@ -1,0 +1,97 @@
+.border {
+  padding: 0px;
+  border: solid 3px #f6a78b;
+}
+
+.heroimg {
+  img {
+    margin-top: 5px;
+  }
+  p {
+    padding: 10px;
+    font-size: 0.5em;
+    font-style: italic;
+  }
+}
+button {
+  @extend %btn;
+}
+.form {
+  padding-top: 1em;
+  background: map-get($color-defs, form);
+  border: 5px solid map-get($color, bright);
+  text-align: center;
+
+  border: none;
+  background: url("../img/paralax.jpg");
+  height: auto;
+  padding-bottom: 30px;
+
+  /* Input fields */
+  input[type="text"] {
+    width: 250px;
+    padding: 0.3em;
+    margin: 0.3em;
+    border-radius: 0.5em;
+    border-style: none;
+    border: 1px solid grey;
+    color: grey;
+  }
+}
+
+.login img {
+  display: none;
+}
+input:nth-child(1) {
+  margin-top: 60px;
+}
+
+input {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.login button {
+  margin-bottom: 60px;
+}
+
+@include respond-to("large") {
+  .heroimg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+    img {
+      padding: 20px;
+    }
+    p {
+      padding: 20px;
+      font-size: 0.7em;
+    }
+  }
+
+  /* Replace border with image */
+  .form {
+    @include page-bg("/img/header.jpg");
+  }
+  /* Increase input field size */
+  .form input[type="text"] {
+    width: 350px;
+  }
+
+  .login {
+    padding: 100px;
+    .form input[type="text"] {
+      width: 350px;
+    }
+  }
+  .login {
+    display: flex;
+  }
+  .login img {
+    display: block;
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Sweet Bikini Life</title>
+
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--endbuild-->
+</head>
+
+<body>
+
+    <!--HEADER can be found in _headernav.scss-->
+    <header>
+
+        <img src="/img/headerwlogo.jpg" alt="SweetBikiniLife" />
+
+    </header>
+    <!--
+    NAVBAR
+  -->
+    <nav>
+
+        <input class="triggs" type="checkbox" id="navbutton">
+        <label for="navbutton" class="navlabel">
+            <a> &#9776</a>
+        </label>
+
+
+
+        <ul>
+            <li>
+                <a href="index.html">SHOP</a>
+            </li>
+
+            <li>
+                <a href="login.html">LOG IN</a>
+            </li>
+            <li class="active">
+                <a href="checkout.html">
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                </a>
+            </li>
+
+        </ul>
+        <!-- main_menu-->
+
+    </nav>
+    <!-- End navbar-->
+
+    <section class="checkout">
+
+        <div class="cart">
+            <h2>Your cart is empty!</h2>
+            <button>
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Shop </button>
+
+
+        </div>
+
+        <div class="checkoutbtns">
+            <p>Subtotal: $0</p>
+            <button>Checkout using Card</button>
+            <a href="#">
+                <img src="/img/paypal.png" style="width:200px" />
+            </a>
+
+
+        </div>
+    </section>
+
+    <img class="secure" style="width:200px" src="/img/secure.png" />
+
+
+    <!--
+        FOOTER
+    -->
+    <footer>
+        <!-- <img src="/img/footer.jpg" alt="SweetBikiniLife" />
+       -->
+
+
+        <!-- Contact -->
+        <div class="contact">
+            <p>Sweet Bikini Life Pty Ltd </p>
+            <p class="line"> | </p>
+            <p>malin.branne@gmail.com</p>
+            <p class="line"> | </p>
+            <p>0470-123 567</p>
+        </div>
+
+
+        <!-- Social links -->
+        <div class="social">
+            <span class="fa fa-facebook-square"></span>
+            <span class="fa fa-twitter"></span>
+            <span class="fa fa-instagram"></span>
+        </div>
+
+    </footer>
+    <!--End footer-->
+</body>
+
+</html>

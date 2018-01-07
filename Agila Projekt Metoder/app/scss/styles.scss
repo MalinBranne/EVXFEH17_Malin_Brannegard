@@ -1,0 +1,22 @@
+/// Normalize
+@import "normalize";
+
+/// UTILITIES:
+/// doesn't output css
+/// setts up the project.
+@import 'utilities/utilities_index';
+
+// BASE:
+// site-wide constant, resets, typography
+@import 'base/base_index';
+
+// MODULES:
+// buttons
+@import 'modules/modules_index';
+
+
+
+// LAYOUT:
+@import 'layout/layout_index';
+body {background-color: white;}
+

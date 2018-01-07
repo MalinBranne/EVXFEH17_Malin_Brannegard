@@ -1,0 +1,16 @@
+// Placeholders and classes:
+
+/// Button placeholder
+%btn {
+    background: map-get($color-defs, button-default);
+    color: map-get($color-defs, button-default-text);
+    // font-family: map-get($text, headline);
+    box-shadow: 1px 1px 10px map-get($color, accent3);
+ opacity: 0.6;
+    border-radius: 2em;
+    border-style: none;
+    margin-top: 1em;
+    font-size: 0.7em;
+    padding: 10px;
+    
+}
